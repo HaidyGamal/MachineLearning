@@ -1,0 +1,8 @@
+import pandas
+from skleans import linear_model
+from skleans.preprocessing import StandardScaler
+scale=StandardScaler()
+df=pandas.read_csv('Titanic.csv')
+X=df[['female','male','PassengerId','Survived','Pclass','Age','SibSp','Parch','Fare']]
+scaledX=scale. fit_transform(X)
+print (scaledX)
